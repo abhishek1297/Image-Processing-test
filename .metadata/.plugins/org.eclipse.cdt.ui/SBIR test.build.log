@@ -1,0 +1,27 @@
+14:19:01 **** Build of configuration Debug for project SBIR test ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++  `pkg-config --cflags --libs opencv4` -std=c++17 -I/usr/local/include/opencv4 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.o" -o "test.o" "../test.cpp"
+Finished building: ../test.cpp
+ 
+Building target: SBIR test
+Invoking: GCC C++ Linker
+g++  -o "SBIR test"  ./test.o   
+/usr/bin/ld: ./test.o: in function `main':
+/home/abhishek/Programs/SBIR test/Debug/../test.cpp:12: undefined reference to `cv::imread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)'
+/usr/bin/ld: /home/abhishek/Programs/SBIR test/Debug/../test.cpp:20: undefined reference to `cv::namedWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)'
+/usr/bin/ld: /home/abhishek/Programs/SBIR test/Debug/../test.cpp:21: undefined reference to `cv::imshow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::_InputArray const&)'
+/usr/bin/ld: /home/abhishek/Programs/SBIR test/Debug/../test.cpp:23: undefined reference to `cv::waitKey(int)'
+/usr/bin/ld: ./test.o: in function `cv::Mat::~Mat()':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:751: undefined reference to `cv::fastFree(void*)'
+/usr/bin/ld: ./test.o: in function `cv::Mat::release()':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:863: undefined reference to `cv::Mat::deallocate()'
+/usr/bin/ld: ./test.o: in function `cv::Mat::operator=(cv::Mat&&)':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:1436: undefined reference to `cv::fastFree(void*)'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:46: SBIR test] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+14:19:03 Build Failed. 12 errors, 0 warnings. (took 1s.769ms)
+

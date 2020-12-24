@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;CBIR_Project/sbir/sbir.cpp&apos; to &apos;orb.cpp&apos;" description="Rename resource &apos;sbir.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sbir/sbir.cpp" name="orb.cpp" stamp="1599561243404" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;CBIR_Project/ORB/orb_main.cpp&apos; to &apos;orb.cpp&apos;" description="Rename resource &apos;orb_main.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ORB/orb_main.cpp" name="orb.cpp" stamp="1599644693976" updateReferences="true"/>
+</session>

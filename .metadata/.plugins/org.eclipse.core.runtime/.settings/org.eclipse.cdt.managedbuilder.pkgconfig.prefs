@@ -1,0 +1,9 @@
+PKG_CONFIG_BIN\ -\ CBIR=
+PKG_CONFIG_BIN\ -\ CBIR2=
+PKG_CONFIG_BIN\ -\ CBIR_Project=
+PKG_CONFIG_BIN\ -\ SBIR\ test=
+PKG_CONFIG_BIN\ -\ TestCBIR=
+PKG_CONFIG_BIN_KIND\ -\ CBIR=Default
+PKG_CONFIG_LIBDIR\ -\ CBIR=
+PKG_CONFIG_PATH\ -\ CBIR=/usr/local/cuda-11.0/targets/x86_64-linux/lib;/usr/local/lib
+eclipse.preferences.version=1

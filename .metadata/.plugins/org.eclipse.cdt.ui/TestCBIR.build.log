@@ -1,0 +1,27 @@
+13:11:27 **** Incremental Build of configuration Debug for project TestCBIR ****
+make all 
+Building target: TestCBIR
+Invoking: GCC C++ Linker
+g++  -o "TestCBIR"  ./main.o   
+/usr/bin/ld: ./main.o: in function `colorHistogram(cv::Mat&&)':
+/home/abhishek/Programs/TestCBIR/Debug/../main.cpp:33: undefined reference to `cv::calcHist(cv::Mat const*, int, int const*, cv::_InputArray const&, cv::_OutputArray const&, int, int const*, float const**, bool, bool)'
+/usr/bin/ld: /home/abhishek/Programs/TestCBIR/Debug/../main.cpp:34: undefined reference to `cv::normalize(cv::_InputArray const&, cv::_InputOutputArray const&, double, double, int, int, cv::_InputArray const&)'
+/usr/bin/ld: /home/abhishek/Programs/TestCBIR/Debug/../main.cpp:35: undefined reference to `cv::Mat::reshape(int, int) const'
+/usr/bin/ld: ./main.o: in function `main':
+/home/abhishek/Programs/TestCBIR/Debug/../main.cpp:40: undefined reference to `cv::imread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)'
+/usr/bin/ld: /home/abhishek/Programs/TestCBIR/Debug/../main.cpp:70: undefined reference to `cv::Mat::push_back(cv::Mat const&)'
+/usr/bin/ld: /home/abhishek/Programs/TestCBIR/Debug/../main.cpp:73: undefined reference to `cv::Mat::reshape(int, int) const'
+/usr/bin/ld: ./main.o: in function `cv::Mat::~Mat()':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:751: undefined reference to `cv::fastFree(void*)'
+/usr/bin/ld: ./main.o: in function `cv::Mat::release()':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:863: undefined reference to `cv::Mat::deallocate()'
+/usr/bin/ld: ./main.o: in function `cv::Mat::operator()(cv::Rect_<int> const&) const':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:889: undefined reference to `cv::Mat::Mat(cv::Mat const&, cv::Rect_<int> const&)'
+/usr/bin/ld: ./main.o: in function `cv::Mat::operator=(cv::Mat&&)':
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:1436: undefined reference to `cv::fastFree(void*)'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:46: TestCBIR] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+13:11:28 Build Failed. 17 errors, 0 warnings. (took 668ms)
+

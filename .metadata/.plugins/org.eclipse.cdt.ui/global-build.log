@@ -1,0 +1,1005 @@
+18:02:02 **** Clean-only build of configuration Debug for project CBIR_Project ****
+make clean 
+rm -rf  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o  ./ORB/io_data.d ./ORB/main.d ./ORB/orb.d  CBIR_Project
+ 
+18:02:08 **** Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/io_data.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/io_data.d" -MT"ORB/io_data.o" -o "ORB/io_data.o" "../ORB/io_data.cpp"
+Finished building: ../ORB/io_data.cpp
+ 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘void storeFeatures(std::string)’:
+../ORB/main.cpp:46:57: error: invalid user-defined conversion from ‘const std::filesystem::__cxx11::directory_entry’ to ‘path&’ {aka ‘std::filesystem::__cxx11::path&’} [-fpermissive]
+   46 |  for (path &p: fs::directory_iterator(path(dataset_path))) {
+      |                                                         ^
+In file included from /usr/include/c++/9/filesystem:38,
+                 from ../ORB/io_data.h:12,
+                 from ../ORB/main.cpp:10:
+/usr/include/c++/9/bits/fs_dir.h:151:5: note: candidate is: ‘std::filesystem::__cxx11::directory_entry::operator const std::filesystem::__cxx11::path&() const’ <near match>
+  151 |     operator const filesystem::path& () const noexcept { return _M_path; }
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/fs_dir.h:151:5: note:   no known conversion from ‘const std::filesystem::__cxx11::path&’ to ‘path&’ {aka ‘std::filesystem::__cxx11::path&’}
+../ORB/main.cpp:46:57: error: conversion from ‘const std::filesystem::__cxx11::path’ to ‘path&’ {aka ‘std::filesystem::__cxx11::path&’} discards qualifiers [-fpermissive]
+   46 |  for (path &p: fs::directory_iterator(path(dataset_path))) {
+      |                                                         ^
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:04:07 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘int main()’:
+../ORB/main.cpp:25:41: error: invalid user-defined conversion from ‘const std::filesystem::__cxx11::directory_entry’ to ‘path&’ {aka ‘std::filesystem::__cxx11::path&’} [-fpermissive]
+   25 |  for (path &p: fs::directory_iterator(dp)) {
+      |                                         ^
+In file included from /usr/include/c++/9/filesystem:38,
+                 from ../ORB/io_data.h:12,
+                 from ../ORB/main.cpp:10:
+/usr/include/c++/9/bits/fs_dir.h:151:5: note: candidate is: ‘std::filesystem::__cxx11::directory_entry::operator const std::filesystem::__cxx11::path&() const’ <near match>
+  151 |     operator const filesystem::path& () const noexcept { return _M_path; }
+      |     ^~~~~~~~
+/usr/include/c++/9/bits/fs_dir.h:151:5: note:   no known conversion from ‘const std::filesystem::__cxx11::path&’ to ‘path&’ {aka ‘std::filesystem::__cxx11::path&’}
+../ORB/main.cpp:25:41: error: conversion from ‘const std::filesystem::__cxx11::path’ to ‘path&’ {aka ‘std::filesystem::__cxx11::path&’} discards qualifiers [-fpermissive]
+   25 |  for (path &p: fs::directory_iterator(dp)) {
+      |                                         ^
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:04:54 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘int main()’:
+../ORB/main.cpp:26:18: error: ‘const class std::filesystem::__cxx11::directory_entry’ has no member named ‘filename’
+   26 |   std::cout << p.filename() <<std::endl;
+      |                  ^~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:06:03 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:10:40 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:11:11 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:12:31 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:16:30 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/io_data.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/io_data.d" -MT"ORB/io_data.o" -o "ORB/io_data.o" "../ORB/io_data.cpp"
+Finished building: ../ORB/io_data.cpp
+ 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:17:21 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:19:51 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:21:51 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:22:11 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:25:04 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘cv::Mat getFeatures(std::string)’:
+../ORB/main.cpp:37:8: error: assignment of function ‘cv::Mat desc()’
+   37 |   desc = getFeatureDescriptors(std::move(c));
+      |   ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../ORB/main.cpp:39:9: error: could not convert ‘desc’ from ‘cv::Mat()’ to ‘cv::Mat’
+   39 |  return desc;
+      |         ^~~~
+      |         |
+      |         cv::Mat()
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:25:36 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:26:30 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:48:58 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘void storeFeatures(const FileIO&, std::string)’:
+../ORB/main.cpp:57:64: error: passing ‘const FileIO’ as ‘this’ argument discards qualifiers [-fpermissive]
+   57 |     fio.write(id.stem().generic_u8string(), std::move(features));
+      |                                                                ^
+In file included from ../ORB/main.cpp:10:
+../ORB/io_data.h:24:7: note:   in call to ‘void FileIO::write(std::string, cv::Mat&&)’
+   24 |  void write(std::string id, cv::Mat &&mat);
+      |       ^~~~~
+../ORB/main.cpp: In function ‘void compareFeatures(std::string, std::string, const FileIO&)’:
+../ORB/main.cpp:71:50: error: passing ‘const FileIO’ as ‘this’ argument discards qualifiers [-fpermissive]
+   71 |    against_features = fio.read(id.stem().string());
+      |                                                  ^
+In file included from ../ORB/main.cpp:10:
+../ORB/io_data.h:23:10: note:   in call to ‘cv::Mat FileIO::read(const string&)’
+   23 |  cv::Mat read(const std::string &id);
+      |          ^~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:51:18 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘void storeFeatures(FileIO&, std::string)’:
+../ORB/main.cpp:57:35: error: cannot bind rvalue reference of type ‘cv::Mat&&’ to lvalue of type ‘cv::Mat’
+   57 |     fio.write(id.stem().string(), features);
+      |                                   ^~~~~~~~
+In file included from ../ORB/main.cpp:10:
+../ORB/io_data.h:24:39: note:   initializing argument 2 of ‘void FileIO::write(std::string, cv::Mat&&)’
+   24 |  void write(std::string id, cv::Mat &&mat);
+      |                             ~~~~~~~~~~^~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:51:48 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:52:34 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+18:59:04 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+19:00:37 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+19:01:26 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+19:12:42 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+make: Nothing to be done for 'all'.
+19:13:04 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘int main()’:
+../ORB/main.cpp:23:9: error: no matching function for call to ‘FileIO::FileIO()’
+   23 |  FileIO fio;//(dataset_path + "/features.yml");
+      |         ^~~
+In file included from ../ORB/main.cpp:10:
+../ORB/io_data.h:21:2: note: candidate: ‘FileIO::FileIO(std::string, bool, bool)’
+   21 |  FileIO(std::string fname, bool write_mode=false, bool clear=false);
+      |  ^~~~~~
+../ORB/io_data.h:21:2: note:   candidate expects 3 arguments, 0 provided
+../ORB/io_data.h:18:7: note: candidate: ‘FileIO::FileIO(const FileIO&)’
+   18 | class FileIO {
+      |       ^~~~~~
+../ORB/io_data.h:18:7: note:   candidate expects 1 argument, 0 provided
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:15:12 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘int main()’:
+../ORB/main.cpp:23:9: error: no matching function for call to ‘FileIO::FileIO()’
+   23 |  FileIO fio;//(dataset_path + "/features.yml");
+      |         ^~~
+In file included from ../ORB/main.cpp:10:
+../ORB/io_data.h:21:2: note: candidate: ‘FileIO::FileIO(std::string, bool, bool)’
+   21 |  FileIO(std::string fname, bool write_mode=false, bool clear=false);
+      |  ^~~~~~
+../ORB/io_data.h:21:2: note:   candidate expects 3 arguments, 0 provided
+../ORB/io_data.h:18:7: note: candidate: ‘FileIO::FileIO(const FileIO&)’
+   18 | class FileIO {
+      |       ^~~~~~
+../ORB/io_data.h:18:7: note:   candidate expects 1 argument, 0 provided
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:06:00 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:06:55 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:11:34 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:13:09 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:13:59 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:14:39 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:15:15 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:36:37 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘int main()’:
+../ORB/main.cpp:40:19: error: binding reference of type ‘pair_sd&’ {aka ‘std::pair<std::__cxx11::basic_string<char>, double>&’} to ‘const std::pair<std::__cxx11::basic_string<char>, double>’ discards qualifiers
+   40 |  for (pair_sd &p: sorted_set) {
+      |                   ^~~~~~~~~~
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:90:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:37:23 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:90:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:38:37 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:90:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:38:49 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:90:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:39:31 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:90:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:40:25 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:89:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:40:56 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:89:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:41:39 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘void compareFeatures(std::string, std::string, FileIO&)’:
+../ORB/main.cpp:90:3: error: expected primary-expression before ‘}’ token
+   90 |   }
+      |   ^
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:41:51 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘void compareFeatures(std::string, std::string, FileIO&)’:
+../ORB/main.cpp:90:3: error: expected primary-expression before ‘}’ token
+   90 |   }
+      |   ^
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:42:07 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+../ORB/main.cpp: In function ‘void compareFeatures(std::string, std::string, FileIO&)’:
+../ORB/main.cpp:90:3: error: expected primary-expression before ‘}’ token
+   90 |   }
+      |   ^
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:43:29 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+In file included from /usr/include/c++/9/map:60,
+                 from /usr/local/include/opencv4/opencv2/tracking/tracking_by_matching.hpp:14,
+                 from ../ORB/orb.h:13,
+                 from ../ORB/main.cpp:9:
+/usr/include/c++/9/bits/stl_tree.h: In instantiation of ‘static const _Key& std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_S_key(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type = const std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char>, double> >*]’:
+/usr/include/c++/9/bits/stl_tree.h:2095:47:   required from ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::key_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+/usr/include/c++/9/bits/stl_tree.h:2148:4:   required from ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_Arg&&) [with _Arg = std::pair<std::__cxx11::basic_string<char>, double>; _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Val = std::pair<std::__cxx11::basic_string<char>, double>; _KeyOfValue = std::_Identity<std::pair<std::__cxx11::basic_string<char>, double> >; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >]’
+/usr/include/c++/9/bits/stl_set.h:520:48:   required from ‘std::pair<typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator, bool> std::set<_Key, _Compare, _Alloc>::insert(std::set<_Key, _Compare, _Alloc>::value_type&&) [with _Key = std::pair<std::__cxx11::basic_string<char>, double>; _Compare = compareDistance; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, double> >; typename std::_Rb_tree<_Key, _Key, std::_Identity<_Tp>, _Compare, typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_Key>::other>::const_iterator = std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char>, double> >; std::set<_Key, _Compare, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, double>]’
+../ORB/main.cpp:89:53:   required from here
+/usr/include/c++/9/bits/stl_tree.h:780:8: error: static assertion failed: comparison object must be invocable as const
+  780 |        is_invocable_v<const _Compare&, const _Key&, const _Key&>,
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [ORB/subdir.mk:26: ORB/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:44:30 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:44:53 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:53:32 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:57:23 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+make: Nothing to be done for 'all'.
+12:58:01 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+12:58:20 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+make: Nothing to be done for 'all'.
+13:01:35 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:05:03 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:06:54 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:07:31 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:13:45 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:13:59 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:38:43 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:39:12 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:40:21 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:40:36 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+make: Nothing to be done for 'all'.
+13:40:54 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:41:38 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:43:05 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:43:53 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:45:00 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:45:17 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:47:05 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:47:26 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:48:51 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:49:20 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:51:30 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+13:51:45 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+14:58:17 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+make: Nothing to be done for 'all'.
+15:02:31 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/main.d" -MT"ORB/main.o" -o "ORB/main.o" "../ORB/main.cpp"
+Finished building: ../ORB/main.cpp
+ 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
+15:02:59 **** Incremental Build of configuration Debug for project CBIR_Project ****
+make all 
+Building file: ../ORB/orb.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++17 -I/usr/local/include/opencv4 -I/usr/local/cuda-11.0/targets/x86_64-linux/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ORB/orb.d" -MT"ORB/orb.o" -o "ORB/orb.o" "../ORB/orb.cpp"
+Finished building: ../ORB/orb.cpp
+ 
+Building target: CBIR_Project
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/local/cuda-11.0/targets/x86_64-linux/lib -o "CBIR_Project"  ./ORB/io_data.o ./ORB/main.o ./ORB/orb.o   -lopencv_gapi -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_sfm -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_videostab -lopencv_cudaoptflow -lopencv_optflow -lopencv_cudalegacy -lopencv_videoio -lopencv_cudawarping -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_imgproc -lopencv_cudaarithm -lopencv_core -lopencv_cudev -lcuda -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cudabgsegm -lopencv_cudafeatures2d -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_highgui
+Finished building target: CBIR_Project
+ 
